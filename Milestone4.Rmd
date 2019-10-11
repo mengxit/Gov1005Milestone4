@@ -71,7 +71,7 @@ immigration_7continents_long <- immigration_7continents %>%
  facet_wrap(~region) +
  transition_time(year) +
  theme(legend.position = "none") +
- labs(title = "Immigration by admission class into US: {(frame_time)}",subtitle = "Separated by continent", y = "Admitted Immigrants", x = "Class of Admission, by continent" ) +
+ labs(title = "Immigration by admission class into US: {(frame_time)}", subtitle = "Separated by continent", y = "Admitted Immigrants", x = "Class of Admission, by continent" ) +
  theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
 
 #save the gif 
@@ -79,9 +79,13 @@ anim_save("graph.gif", graph)
 ```
 
 <!--render the gif image-->
-![](goo.gif)
+![](graph.gif)
 
-#Observations:There are shifts in both total immigration count and admission class into US from the major continents. The next step will be to design a data dashboard that showcase both the overall trend and segmented patterns, and to connect immigration admission data with US Census Bureau social economic data. 
+#Observations 1 :There are shifts in both total immigration count and admission class into US from the major continents. The next step will be to design a data dashboard that showcase both the overall trend and segmented patterns, and to connect immigration admission data with US Census Bureau social economic data. 
+
+#Observation 2: The gganimate graph is slow to render, and might be hard for user to digest information(even though it looks cool!) Therefore, I will see what's the capability for Shiny package, and may use a slider instead. 
+
+
 
 
 
